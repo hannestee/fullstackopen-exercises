@@ -1,0 +1,17 @@
+note over browser:
+User types in the text field and clicks submit.
+end note
+note over browser:
+The new note is pushed in to the notes array on 
+client side and browser is called to redraw the notes list.
+end note
+note over browser:
+Note is sent over to the server as json object
+end note
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+note over server:
+Server reads the json object and pushes it 
+to the notes array on server side.
+end note
+server-->browser: 201 Created
+
